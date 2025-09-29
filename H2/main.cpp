@@ -64,7 +64,7 @@ int main() {
 	int data[] = { 3, 1, 4, 2, 5, 3, 4, 4 };
 	int data2[] = { 3, 1, 4, 2, 5, 7, 8, 0 };
 
-	std::cout << (transform_and_conquer(data2, 8) ? "jedinečné" : "nejedinečné") << std::endl;
+	std::cout << (transform_and_conquer(data, 8) ? "jedinečné" : "nejedinečné") << std::endl;
 	std::cout << "Modus: " << modus(data, 8) << std::endl;
 	
 	return 0;

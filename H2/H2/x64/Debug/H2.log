@@ -1,4 +1,4 @@
 ﻿  main.cpp
-C:\Users\STE0610\source\repos\Alg2\H2\main.cpp(67,50): warning C4566: character represented by universal-character-name '\u010D' cannot be represented in the current code page (1252)
-C:\Users\STE0610\source\repos\Alg2\H2\main.cpp(67,66): warning C4566: character represented by universal-character-name '\u010D' cannot be represented in the current code page (1252)
+C:\Users\STE0610\source\repos\Alg2\H2\main.cpp(67,49): warning C4566: character represented by universal-character-name '\u010D' cannot be represented in the current code page (1252)
+C:\Users\STE0610\source\repos\Alg2\H2\main.cpp(67,65): warning C4566: character represented by universal-character-name '\u010D' cannot be represented in the current code page (1252)
   H2.vcxproj -> C:\Users\STE0610\source\repos\Alg2\H2\x64\Debug\H2.exe
