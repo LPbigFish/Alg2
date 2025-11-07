@@ -59,7 +59,11 @@ public:
 	}
 };
 
+<<<<<<< HEAD
 int main() {	
+=======
+int main() {
+>>>>>>> refs/remotes/origin/main
 	State base_state(false, false, false, false);
 
 	queue<vector<State>> q;
