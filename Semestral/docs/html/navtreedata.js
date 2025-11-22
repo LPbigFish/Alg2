@@ -35,14 +35,13 @@ var NAVTREE =
     ] ],
     [ "Soubory", "files.html", [
       [ "Seznam souborů", "files.html", "files_dup" ]
-    ] ],
-    [ "Příklady", "examples.html", "examples" ]
+    ] ]
   ] ]
 ];
 
 var NAVTREEINDEX =
 [
-"_c_1_2_users_2stegn_2source_2repos_2_alg2_2_semestral_2src_2main_8cpp-example.html"
+"_graph_8h_source.html"
 ];
 
 var SYNCONMSG = 'zakázat synchronizaci panelů';

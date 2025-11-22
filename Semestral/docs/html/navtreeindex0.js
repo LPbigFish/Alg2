@@ -1,6 +1,5 @@
 var NAVTREEINDEX0 =
 {
-"_c_1_2_users_2stegn_2source_2repos_2_alg2_2_semestral_2src_2main_8cpp-example.html":[2,0],
 "_graph_8h_source.html":[1,0,0,0],
 "_node_8h_source.html":[1,0,0,1],
 "annotated.html":[0,0],
@@ -13,7 +12,6 @@ var NAVTREEINDEX0 =
 "class_node.html":[0,0,1],
 "classes.html":[0,1],
 "dir_68267d1309a1af8e8297ef4c3efbcdba.html":[1,0,0],
-"examples.html":[2],
 "files.html":[1,0],
 "functions.html":[0,2,0],
 "functions_func.html":[0,2,1],

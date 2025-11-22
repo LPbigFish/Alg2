@@ -7,6 +7,10 @@
 /**
  * @class Graph
  * @brief Tøída reprezentující orientovaný graf závislostí souborù v projektu.
+ * 
+ * Zdroje:
+ * https://en.wikipedia.org/wiki/Topological_sorting
+ * ALG 1 - 2024/25 - Závìreèný test
  */
 class Graph {
 	std::vector<Node*> nodes;

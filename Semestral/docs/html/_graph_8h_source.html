@@ -111,31 +111,31 @@ $(function(){initNavTree('_graph_8h_source.html',''); initResizable(true); });
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;set&gt;</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span></div>
-<div class="foldopen" id="foldopen00011" data-start="{" data-end="};">
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="class_graph.html">   11</a></span><span class="keyword">class </span>Graph {</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    std::vector&lt;Node*&gt; nodes;</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    std::vector&lt;Node*&gt; transposedNodes;</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    Graph() = <span class="keywordflow">default</span>;</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    ~Graph();</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    </div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_graph.html#afea2b3eb965c7b08766ccd832c1a7bad">addRelation</a>(<span class="keywordtype">int</span> file, <span class="keywordtype">int</span> dep);</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    </div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    std::set&lt;Node*&gt; <a class="code hl_function" href="class_graph.html#ac661c795b5bccafd1ec9030b7522e22f">bfs</a>(<span class="keywordtype">int</span> node);</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    </div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span></div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <a class="code hl_class" href="class_node.html">Node</a>* <a class="code hl_function" href="class_graph.html#a54460c0052ecad9972497d32904bb965">getNode</a>(<span class="keywordtype">int</span> value);</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span></div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <a class="code hl_class" href="class_node.html">Node</a>* <a class="code hl_function" href="class_graph.html#a8a8a506d5d54fb0c11708426aca18ef6">getTNode</a>(<span class="keywordtype">int</span> value);</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    </div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="class_graph.html#a79e0eaa71a68b231ffc69d09329c6d78">   72</a></span>    std::vector&lt;Node*&gt; <a class="code hl_function" href="class_graph.html#a79e0eaa71a68b231ffc69d09329c6d78">getNodes</a>() { <span class="keywordflow">return</span> nodes; }</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>};</div>
+<div class="foldopen" id="foldopen00015" data-start="{" data-end="};">
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="class_graph.html">   15</a></span><span class="keyword">class </span>Graph {</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    std::vector&lt;Node*&gt; nodes;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    std::vector&lt;Node*&gt; transposedNodes;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    Graph() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    ~Graph();</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_graph.html#afea2b3eb965c7b08766ccd832c1a7bad">addRelation</a>(<span class="keywordtype">int</span> file, <span class="keywordtype">int</span> dep);</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    std::set&lt;Node*&gt; <a class="code hl_function" href="class_graph.html#ac661c795b5bccafd1ec9030b7522e22f">bfs</a>(<span class="keywordtype">int</span> node);</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <a class="code hl_class" href="class_node.html">Node</a>* <a class="code hl_function" href="class_graph.html#a54460c0052ecad9972497d32904bb965">getNode</a>(<span class="keywordtype">int</span> value);</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <a class="code hl_class" href="class_node.html">Node</a>* <a class="code hl_function" href="class_graph.html#a8a8a506d5d54fb0c11708426aca18ef6">getTNode</a>(<span class="keywordtype">int</span> value);</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="class_graph.html#a79e0eaa71a68b231ffc69d09329c6d78">   76</a></span>    std::vector&lt;Node*&gt; <a class="code hl_function" href="class_graph.html#a79e0eaa71a68b231ffc69d09329c6d78">getNodes</a>() { <span class="keywordflow">return</span> nodes; }</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>};</div>
 </div>
 <div class="ttc" id="aclass_graph_html_a54460c0052ecad9972497d32904bb965"><div class="ttname"><a href="class_graph.html#a54460c0052ecad9972497d32904bb965">Graph::getNode</a></div><div class="ttdeci">Node * getNode(int value)</div><div class="ttdoc">Vyhledá uzel v grafu podle jeho id.</div><div class="ttdef"><b>Definition</b> Graph.cpp:37</div></div>
-<div class="ttc" id="aclass_graph_html_a79e0eaa71a68b231ffc69d09329c6d78"><div class="ttname"><a href="class_graph.html#a79e0eaa71a68b231ffc69d09329c6d78">Graph::getNodes</a></div><div class="ttdeci">std::vector&lt; Node * &gt; getNodes()</div><div class="ttdoc">Vrátí vektor všech uzlů v grafu.</div><div class="ttdef"><b>Definition</b> Graph.h:72</div></div>
+<div class="ttc" id="aclass_graph_html_a79e0eaa71a68b231ffc69d09329c6d78"><div class="ttname"><a href="class_graph.html#a79e0eaa71a68b231ffc69d09329c6d78">Graph::getNodes</a></div><div class="ttdeci">std::vector&lt; Node * &gt; getNodes()</div><div class="ttdoc">Vrátí vektor všech uzlů v grafu.</div><div class="ttdef"><b>Definition</b> Graph.h:76</div></div>
 <div class="ttc" id="aclass_graph_html_a8a8a506d5d54fb0c11708426aca18ef6"><div class="ttname"><a href="class_graph.html#a8a8a506d5d54fb0c11708426aca18ef6">Graph::getTNode</a></div><div class="ttdeci">Node * getTNode(int value)</div><div class="ttdoc">Vyhledá uzel v transponovaném grafu podle jeho id.</div><div class="ttdef"><b>Definition</b> Graph.cpp:28</div></div>
-<div class="ttc" id="aclass_graph_html_ac661c795b5bccafd1ec9030b7522e22f"><div class="ttname"><a href="class_graph.html#ac661c795b5bccafd1ec9030b7522e22f">Graph::bfs</a></div><div class="ttdeci">std::set&lt; Node * &gt; bfs(int node)</div><div class="ttdoc">Provádí BFS na transponovaném grafu.</div><div class="ttdef"><b>Definition</b> Graph.cpp:64</div></div>
+<div class="ttc" id="aclass_graph_html_ac661c795b5bccafd1ec9030b7522e22f"><div class="ttname"><a href="class_graph.html#ac661c795b5bccafd1ec9030b7522e22f">Graph::bfs</a></div><div class="ttdeci">std::set&lt; Node * &gt; bfs(int node)</div><div class="ttdoc">Provádí BFS na transponovaném grafu.</div><div class="ttdef"><b>Definition</b> Graph.cpp:48</div></div>
 <div class="ttc" id="aclass_graph_html_afea2b3eb965c7b08766ccd832c1a7bad"><div class="ttname"><a href="class_graph.html#afea2b3eb965c7b08766ccd832c1a7bad">Graph::addRelation</a></div><div class="ttdeci">void addRelation(int file, int dep)</div><div class="ttdoc">Přidá relaci (hranu) mezi dvěma soubory do grafu.</div><div class="ttdef"><b>Definition</b> Graph.cpp:5</div></div>
 <div class="ttc" id="aclass_node_html"><div class="ttname"><a href="class_node.html">Node</a></div><div class="ttdoc">Třída reprezentující vrchol (soubor) v grafu závislostí.</div><div class="ttdef"><b>Definition</b> Node.h:11</div></div>
 </div><!-- fragment --></div><!-- contents -->
