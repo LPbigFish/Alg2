@@ -1,0 +1,22 @@
+var NAVTREEINDEX0 =
+{
+"_c_1_2_users_2stegn_2source_2repos_2_alg2_2_semestral_2src_2main_8cpp-example.html":[2,0],
+"_graph_8h_source.html":[1,0,0,0],
+"_node_8h_source.html":[1,0,0,1],
+"annotated.html":[0,0],
+"class_graph.html":[0,0,0],
+"class_graph.html#a54460c0052ecad9972497d32904bb965":[0,0,0,2],
+"class_graph.html#a79e0eaa71a68b231ffc69d09329c6d78":[0,0,0,3],
+"class_graph.html#a8a8a506d5d54fb0c11708426aca18ef6":[0,0,0,4],
+"class_graph.html#ac661c795b5bccafd1ec9030b7522e22f":[0,0,0,1],
+"class_graph.html#afea2b3eb965c7b08766ccd832c1a7bad":[0,0,0,0],
+"class_node.html":[0,0,1],
+"classes.html":[0,1],
+"dir_68267d1309a1af8e8297ef4c3efbcdba.html":[1,0,0],
+"examples.html":[2],
+"files.html":[1,0],
+"functions.html":[0,2,0],
+"functions_func.html":[0,2,1],
+"index.html":[],
+"pages.html":[]
+};

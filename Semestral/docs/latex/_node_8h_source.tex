@@ -1,0 +1,19 @@
+\doxysection{Node.\+h}
+\hypertarget{_node_8h_source}{}\label{_node_8h_source}\index{src/Node.h@{src/Node.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{class\ }Node\ \{}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keywordtype}{int}\ value;}
+\DoxyCodeLine{00013\ \ \ \ \ std::vector<Node*>\ neighbors;}
+\DoxyCodeLine{00014\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00015\ \ \ \ \ Node(\textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id})\ :\ value(\textcolor{keywordtype}{id})\ \{\}}
+\DoxyCodeLine{00016\ \ \ \ \ }
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{int}\ getValue()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ value;\ \}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \ \ \ \ std::vector<Node*>\&\ getNeighbors()\ \{\ \textcolor{keywordflow}{return}\ neighbors;\ \}}
+\DoxyCodeLine{00020\ \};}
+
+\end{DoxyCode}

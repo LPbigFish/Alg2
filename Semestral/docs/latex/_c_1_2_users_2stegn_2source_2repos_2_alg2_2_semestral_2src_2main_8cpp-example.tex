@@ -1,0 +1,116 @@
+\doxysection{C\+:/\+Users/stegn/source/repos/\+Alg2/\+Semestral/src/main.\+cpp}
+\hypertarget{_c_1_2_users_2stegn_2source_2repos_2_alg2_2_semestral_2src_2main_8cpp-example}{}\label{_c_1_2_users_2stegn_2source_2repos_2_alg2_2_semestral_2src_2main_8cpp-example}Hlavní program pro analýzu závislostí zdrojových kódů projektu.
+
+Hlavní program pro analýzu závislostí zdrojových kódů projektu.\+Program čte ze textového souboru graf závislostí souborů v projektě. Každý řádek vstupu obsahuje jednu hranu grafu ve tvaru "{}u -\/$>$ v"{}, kde soubor u závisí na souboru v (obsahuje \#include souboru v).
+
+Příklad vstupu\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{0\ -\/>\ 1}
+\DoxyCodeLine{0\ -\/>\ 2}
+\DoxyCodeLine{1\ -\/>\ 3}
+
+\end{DoxyCode}
+
+
+Program\+:
+\begin{DoxyEnumerate}
+\item Čte graf ze souboru uvedeného v argumentu příkazové řádky
+\item Vytváří interní reprezentaci orientovaného grafu
+\item Pro každý soubor určí všechny soubory, které jsou jím ovlivněny (tj. které na něm závisí přímě nebo nepřímo)
+\item Vypíše výsledky ve formátu\+: "{}soubor -\/$>$ závislý1, závislý2, ..."{}
+\end{DoxyEnumerate}
+
+Výstup\+: Podle poznámky 10 v zadání je každý soubor zahrnut i sám v sobě (samozávislost). Soubory se vypisují v sestupném pořadí podle jejich identifikátorů.
+
+
+\begin{DoxyParams}{Parametry}
+{\em argc} & Počet argumentů příkazové řádky. \\
+\hline
+{\em argv} & Pole argumentů příkazové řádky. argv\mbox{[}1\mbox{]} musí obsahovat cestu ke vstupnímu souboru s grafem závislostí.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Návratová hodnota}
+EXIT\+\_\+\+SUCCESS (0) při úspěšném provedení, EXIT\+\_\+\+FAILURE (1) při chybě (špatný počet argumentů nebo nemohu otevřít soubor).
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{program.exe\ input.txt}
+
+\end{DoxyCode}
+
+
+
+\begin{DoxyCodeInclude}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include\ "{}Graph.h"{}}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include\ <fstream>}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\ DELIM\ =\ \textcolor{stringliteral}{"{}-\/>"{}};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ showOff(\mbox{\hyperlink{class_graph}{Graph}}\&\ graph,\ set<int>\&\ values)\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ file\_id\ :\ values)\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ set<Node*>\ result\ =\ graph.\mbox{\hyperlink{class_graph_ac661c795b5bccafd1ec9030b7522e22f}{bfs}}(file\_id);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ vector<Node*>\ result\_nodes(result.begin(),\ result.end());}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ qsort(\&result\_nodes[0],\ result\_nodes.size(),\ \textcolor{keyword}{sizeof}(\mbox{\hyperlink{class_node}{Node}}*),}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ [](\textcolor{keyword}{const}\ \textcolor{keywordtype}{void}*\ a,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{void}*\ b)\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Node*\ nodeA\ =\ *(Node**)a;}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Node*\ nodeB\ =\ *(Node**)b;}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ return\ nodeB-\/>getValue()\ -\/\ nodeA-\/>getValue();}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ cout\ <<\ file\_id\ <<\ \textcolor{stringliteral}{"{}\ -\/>\ "{}};}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (!result\_nodes.empty())\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_node}{Node}}*\ node\ =\ result\_nodes.back();}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ result\_nodes.pop\_back();}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ node-\/>getValue()\ <<\ (!result\_nodes.empty()\ ?\ \textcolor{stringliteral}{"{},\ "{}}\ :\ \textcolor{stringliteral}{"{}"{}}\ );}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\ \ \ \ \ \ \ \ cout\ <<\ endl;}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordtype}{int}\ main(\textcolor{keywordtype}{int}\ argc,\ \textcolor{keywordtype}{char}*\ argv[])\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Kontrola\ počtu\ argumentů}}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{if}\ (argc\ !=\ 2)\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ cerr\ <<\ \textcolor{stringliteral}{"{}Usage:\ "{}}\ <<\ argv[0]\ <<\ \textcolor{stringliteral}{"{}\ <input\_file>"{}}\ <<\ endl;}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 1;}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Otevření\ vstupního\ souboru}}
+\DoxyCodeLine{\ \ \ \ std::ifstream\ file\_input(argv[1]);}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{if}\ (!file\_input.is\_open())\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ cerr\ <<\ \textcolor{stringliteral}{"{}Error\ opening\ file:\ "{}}\ <<\ argv[1]\ <<\ endl;}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 1;}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{string}\ line;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{class_graph}{Graph}}\ graph;}
+\DoxyCodeLine{\ \ \ \ set<int>\ values;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Čtení\ grafu\ ze\ souboru\ a\ vytvoření\ interní\ reprezentace}}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{while}\ (std::getline(file\_input,\ line))\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ Parsování\ řádku:\ "{}u\ -\/>\ v"{}}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id}\ =\ stoi(line.substr(0,\ line.find(DELIM)));}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ id2\ =\ stoi(line.substr(line.find(DELIM)\ +\ DELIM.length()));}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ values.insert(\textcolor{keywordtype}{id});}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ values.insert(id2);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ Přidání\ hrany\ do\ grafu}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ graph.\mbox{\hyperlink{class_graph_afea2b3eb965c7b08766ccd832c1a7bad}{addRelation}}(\textcolor{keywordtype}{id},\ id2);}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ file\_input.close();}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Výstup\ výsledků\ analýzy}}
+\DoxyCodeLine{\ \ \ \ showOff(graph,\ values);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\}}
+
+\end{DoxyCodeInclude}
+ 

@@ -13,5 +13,43 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Resource Files\Tests">
+      <UniqueIdentifier>{fecd7ffd-ea85-4ad5-a4ee-49ad11bea4af}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Doxyfile">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\Graph.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Node.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\Graph.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="tests\SmallProject.txt">
+      <Filter>Resource Files\Tests</Filter>
+    </Text>
+    <Text Include="tests\SmallProject_Results.txt">
+      <Filter>Resource Files\Tests</Filter>
+    </Text>
+    <Text Include="tests\LargeProject.txt">
+      <Filter>Resource Files\Tests</Filter>
+    </Text>
+    <Text Include="tests\LargeProject_Results.txt">
+      <Filter>Resource Files\Tests</Filter>
+    </Text>
   </ItemGroup>
 </Project>

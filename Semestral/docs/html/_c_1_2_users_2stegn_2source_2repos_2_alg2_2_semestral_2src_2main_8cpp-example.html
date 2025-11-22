@@ -1,0 +1,212 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="cs">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>STE0610 - Závislosti zdrojových kódů: C:/Users/stegn/source/repos/Alg2/Semestral/src/main.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">STE0610 - Závislosti zdrojových kódů
+   </div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="Hledat" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Vygenerováno programem Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('_c_1_2_users_2stegn_2source_2repos_2_alg2_2_semestral_2src_2main_8cpp-example.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Načítám...</div>
+<div class="SRStatus" id="Searching">Vyhledávám...</div>
+<div class="SRStatus" id="NoMatches">Nebylo nic nalezeno</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">C:/Users/stegn/source/repos/Alg2/Semestral/src/main.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+<p>Hlavní program pro analýzu závislostí zdrojových kódů projektu.</p>
+<p>Hlavní program pro analýzu závislostí zdrojových kódů projektu.Program čte ze textového souboru graf závislostí souborů v projektě. Každý řádek vstupu obsahuje jednu hranu grafu ve tvaru "u -&gt; v", kde soubor u závisí na souboru v (obsahuje #include souboru v).</p>
+<p>Příklad vstupu: </p><div class="fragment"><div class="line">0 -&gt; 1</div>
+<div class="line">0 -&gt; 2</div>
+<div class="line">1 -&gt; 3</div>
+</div><!-- fragment --><p>Program:</p><ol type="1">
+<li>Čte graf ze souboru uvedeného v argumentu příkazové řádky</li>
+<li>Vytváří interní reprezentaci orientovaného grafu</li>
+<li>Pro každý soubor určí všechny soubory, které jsou jím ovlivněny (tj. které na něm závisí přímě nebo nepřímo)</li>
+<li>Vypíše výsledky ve formátu: "soubor -&gt; závislý1, závislý2, ..."</li>
+</ol>
+<p>Výstup: Podle poznámky 10 v zadání je každý soubor zahrnut i sám v sobě (samozávislost). Soubory se vypisují v sestupném pořadí podle jejich identifikátorů.</p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">argc</td><td>Počet argumentů příkazové řádky. </td></tr>
+    <tr><td class="paramname">argv</td><td>Pole argumentů příkazové řádky. argv[1] musí obsahovat cestu ke vstupnímu souboru s grafem závislostí.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Návratová hodnota</dt><dd>EXIT_SUCCESS (0) při úspěšném provedení, EXIT_FAILURE (1) při chybě (špatný počet argumentů nebo nemohu otevřít soubor).</dd></dl>
+<div class="fragment"><div class="line">program.exe input.txt</div>
+</div><!-- fragment --><div class="fragment"><div class="line"><span class="preprocessor">#include &quot;Graph.h&quot;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;fstream&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">using namespace </span>std;</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">const</span> <span class="keywordtype">string</span> DELIM = <span class="stringliteral">&quot;-&gt;&quot;</span>;</div>
+<div class="line"></div>
+<div class="line"><span class="keyword">static</span> <span class="keywordtype">void</span> showOff(<a id="_a0" name="_a0"></a><a class="code hl_class" href="class_graph.html">Graph</a>&amp; graph, set&lt;int&gt;&amp; values) {</div>
+<div class="line">    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> file_id : values) {</div>
+<div class="line">        set&lt;Node*&gt; result = graph.<a id="a1" name="a1"></a><a class="code hl_function" href="class_graph.html#ac661c795b5bccafd1ec9030b7522e22f">bfs</a>(file_id);</div>
+<div class="line"> </div>
+<div class="line">        vector&lt;Node*&gt; result_nodes(result.begin(), result.end());</div>
+<div class="line">        qsort(&amp;result_nodes[0], result_nodes.size(), <span class="keyword">sizeof</span>(<a id="_a2" name="_a2"></a><a class="code hl_class" href="class_node.html">Node</a>*),</div>
+<div class="line">            [](<span class="keyword">const</span> <span class="keywordtype">void</span>* a, <span class="keyword">const</span> <span class="keywordtype">void</span>* b) {</div>
+<div class="line">                Node* nodeA = *(Node**)a;</div>
+<div class="line">                Node* nodeB = *(Node**)b;</div>
+<div class="line">                return nodeB-&gt;getValue() - nodeA-&gt;getValue();</div>
+<div class="line">            });</div>
+<div class="line"> </div>
+<div class="line">        cout &lt;&lt; file_id &lt;&lt; <span class="stringliteral">&quot; -&gt; &quot;</span>;</div>
+<div class="line">        <span class="keywordflow">while</span> (!result_nodes.empty()) {</div>
+<div class="line">            <a class="code hl_class" href="class_node.html">Node</a>* node = result_nodes.back();</div>
+<div class="line">            result_nodes.pop_back();</div>
+<div class="line">            cout &lt;&lt; node-&gt;<a id="a3" name="a3"></a>getValue() &lt;&lt; (!result_nodes.empty() ? <span class="stringliteral">&quot;, &quot;</span> : <span class="stringliteral">&quot;&quot;</span> );</div>
+<div class="line">        }</div>
+<div class="line">        </div>
+<div class="line">        cout &lt;&lt; endl;</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+<div class="line"></div>
+<div class="line"><span class="keywordtype">int</span> main(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>* argv[]) {</div>
+<div class="line">    <span class="comment">// Kontrola počtu argumentů</span></div>
+<div class="line">    <span class="keywordflow">if</span> (argc != 2) {</div>
+<div class="line">        cerr &lt;&lt; <span class="stringliteral">&quot;Usage: &quot;</span> &lt;&lt; argv[0] &lt;&lt; <span class="stringliteral">&quot; &lt;input_file&gt;&quot;</span> &lt;&lt; endl;</div>
+<div class="line">        <span class="keywordflow">return</span> 1;</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// Otevření vstupního souboru</span></div>
+<div class="line">    std::ifstream file_input(argv[1]);</div>
+<div class="line">    <span class="keywordflow">if</span> (!file_input.is_open()) {</div>
+<div class="line">        cerr &lt;&lt; <span class="stringliteral">&quot;Error opening file: &quot;</span> &lt;&lt; argv[1] &lt;&lt; endl;</div>
+<div class="line">        <span class="keywordflow">return</span> 1;</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordtype">string</span> line;</div>
+<div class="line"> </div>
+<div class="line">    <a class="code hl_class" href="class_graph.html">Graph</a> graph;</div>
+<div class="line">    set&lt;int&gt; values;</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// Čtení grafu ze souboru a vytvoření interní reprezentace</span></div>
+<div class="line">    <span class="keywordflow">while</span> (std::getline(file_input, line)) {</div>
+<div class="line">        <span class="comment">// Parsování řádku: &quot;u -&gt; v&quot;</span></div>
+<div class="line">        <span class="keywordtype">int</span> <span class="keywordtype">id</span> = stoi(line.substr(0, line.find(DELIM)));</div>
+<div class="line">        <span class="keywordtype">int</span> id2 = stoi(line.substr(line.find(DELIM) + DELIM.length()));</div>
+<div class="line"> </div>
+<div class="line">        values.insert(<span class="keywordtype">id</span>);</div>
+<div class="line">        values.insert(id2);</div>
+<div class="line"> </div>
+<div class="line">        <span class="comment">// Přidání hrany do grafu</span></div>
+<div class="line">        graph.<a id="a4" name="a4"></a><a class="code hl_function" href="class_graph.html#afea2b3eb965c7b08766ccd832c1a7bad">addRelation</a>(<span class="keywordtype">id</span>, id2);</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    file_input.close();</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// Výstup výsledků analýzy</span></div>
+<div class="line">    showOff(graph, values);</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordflow">return</span> 0;</div>
+<div class="line">}</div>
+<div class="ttc" id="aclass_graph_html"><div class="ttname"><a href="class_graph.html">Graph</a></div><div class="ttdoc">Třída reprezentující orientovaný graf závislostí souborů v projektu.</div><div class="ttdef"><b>Definition</b> Graph.h:11</div></div>
+<div class="ttc" id="aclass_graph_html_ac661c795b5bccafd1ec9030b7522e22f"><div class="ttname"><a href="class_graph.html#ac661c795b5bccafd1ec9030b7522e22f">Graph::bfs</a></div><div class="ttdeci">std::set&lt; Node * &gt; bfs(int node)</div><div class="ttdoc">Provádí BFS na transponovaném grafu.</div><div class="ttdef"><b>Definition</b> Graph.cpp:64</div></div>
+<div class="ttc" id="aclass_graph_html_afea2b3eb965c7b08766ccd832c1a7bad"><div class="ttname"><a href="class_graph.html#afea2b3eb965c7b08766ccd832c1a7bad">Graph::addRelation</a></div><div class="ttdeci">void addRelation(int file, int dep)</div><div class="ttdoc">Přidá relaci (hranu) mezi dvěma soubory do grafu.</div><div class="ttdef"><b>Definition</b> Graph.cpp:5</div></div>
+<div class="ttc" id="aclass_node_html"><div class="ttname"><a href="class_node.html">Node</a></div><div class="ttdoc">Třída reprezentující vrchol (soubor) v grafu závislostí.</div><div class="ttdef"><b>Definition</b> Node.h:11</div></div>
+</div><!-- fragment --> </div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Vygenerováno programem <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+  </ul>
+</div>
+</body>
+</html>

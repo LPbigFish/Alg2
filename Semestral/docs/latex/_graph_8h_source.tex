@@ -1,0 +1,31 @@
+\doxysection{Graph.\+h}
+\hypertarget{_graph_8h_source}{}\label{_graph_8h_source}\index{src/Graph.h@{src/Graph.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}Node.h"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <queue>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <set>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{class\ }Graph\ \{}
+\DoxyCodeLine{00012\ \ \ \ \ std::vector<Node*>\ nodes;}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \ \ \ \ std::vector<Node*>\ transposedNodes;}
+\DoxyCodeLine{00015\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00016\ \ \ \ \ Graph()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00017\ \ \ \ \ \string~Graph();}
+\DoxyCodeLine{00018\ \ \ \ \ }
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_graph_afea2b3eb965c7b08766ccd832c1a7bad}{addRelation}}(\textcolor{keywordtype}{int}\ file,\ \textcolor{keywordtype}{int}\ dep);}
+\DoxyCodeLine{00030\ \ \ \ \ }
+\DoxyCodeLine{00048\ \ \ \ \ std::set<Node*>\ \mbox{\hyperlink{class_graph_ac661c795b5bccafd1ec9030b7522e22f}{bfs}}(\textcolor{keywordtype}{int}\ node);}
+\DoxyCodeLine{00049\ \ \ \ \ }
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00057\ \ \ \ \ \mbox{\hyperlink{class_node}{Node}}*\ \mbox{\hyperlink{class_graph_a54460c0052ecad9972497d32904bb965}{getNode}}(\textcolor{keywordtype}{int}\ value);}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00065\ \ \ \ \ \mbox{\hyperlink{class_node}{Node}}*\ \mbox{\hyperlink{class_graph_a8a8a506d5d54fb0c11708426aca18ef6}{getTNode}}(\textcolor{keywordtype}{int}\ value);}
+\DoxyCodeLine{00066\ \ \ \ \ }
+\DoxyCodeLine{00072\ \ \ \ \ std::vector<Node*>\ \mbox{\hyperlink{class_graph_a79e0eaa71a68b231ffc69d09329c6d78}{getNodes}}()\ \{\ \textcolor{keywordflow}{return}\ nodes;\ \}}
+\DoxyCodeLine{00073\ \};}
+
+\end{DoxyCode}

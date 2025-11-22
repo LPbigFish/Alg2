@@ -1,0 +1,4 @@
+var examples =
+[
+    [ "C:/Users/stegn/source/repos/Alg2/Semestral/src/main.cpp", "_c_1_2_users_2stegn_2source_2repos_2_alg2_2_semestral_2src_2main_8cpp-example.html", null ]
+];

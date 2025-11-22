@@ -1,0 +1,148 @@
+\doxysection{Dokumentace třídy Graph}
+\hypertarget{class_graph}{}\label{class_graph}\index{Graph@{Graph}}
+
+
+Třída reprezentující orientovaný graf závislostí souborů v projektu.  
+
+
+
+
+{\ttfamily \#include $<$Graph.\+h$>$}
+
+\doxysubsubsection*{Veřejné metody}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_graph_afea2b3eb965c7b08766ccd832c1a7bad}{add\+Relation}} (int file, int dep)
+\begin{DoxyCompactList}\small\item\em Přidá relaci (hranu) mezi dvěma soubory do grafu. \end{DoxyCompactList}\item 
+std\+::set$<$ \mbox{\hyperlink{class_node}{Node}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_graph_ac661c795b5bccafd1ec9030b7522e22f}{bfs}} (int node)
+\begin{DoxyCompactList}\small\item\em Provádí BFS na transponovaném grafu. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_node}{Node}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_graph_a54460c0052ecad9972497d32904bb965}{get\+Node}} (int value)
+\begin{DoxyCompactList}\small\item\em Vyhledá uzel v grafu podle jeho id. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_node}{Node}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_graph_a8a8a506d5d54fb0c11708426aca18ef6}{get\+TNode}} (int value)
+\begin{DoxyCompactList}\small\item\em Vyhledá uzel v transponovaném grafu podle jeho id. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{class_node}{Node}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_graph_a79e0eaa71a68b231ffc69d09329c6d78}{get\+Nodes}} ()
+\begin{DoxyCompactList}\small\item\em Vrátí vektor všech uzlů v grafu. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailní popis}
+Třída reprezentující orientovaný graf závislostí souborů v projektu. \begin{Desc}
+\item[Příklady]\par
+\mbox{\hyperlink{_c_1_2_users_2stegn_2source_2repos_2_alg2_2_semestral_2src_2main_8cpp-example}{C\+:/\+Users/stegn/source/repos/\+Alg2/\+Semestral/src/main.\+cpp}}.\end{Desc}
+
+
+\doxysubsection{Dokumentace členských funkcí}
+\Hypertarget{class_graph_afea2b3eb965c7b08766ccd832c1a7bad}\index{Graph@{Graph}!addRelation@{addRelation}}
+\index{addRelation@{addRelation}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{addRelation()}{addRelation()}}
+{\footnotesize\ttfamily \label{class_graph_afea2b3eb965c7b08766ccd832c1a7bad} 
+void Graph\+::add\+Relation (\begin{DoxyParamCaption}\item[{int}]{file}{, }\item[{int}]{dep}{}\end{DoxyParamCaption})}
+
+
+
+Přidá relaci (hranu) mezi dvěma soubory do grafu. 
+
+Vytváří dvě hrany\+:
+\begin{DoxyEnumerate}
+\item V původním grafu\+: file -\/\texorpdfstring{$>$}{>} dep (file závisí na dep)
+\item V transponovaném grafu\+: dep -\/\texorpdfstring{$>$}{>} file (reverse direction)
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}{Parametry}
+{\em file} & Soubor, který závisí (zdrojový soubor). \\
+\hline
+{\em dep} & Soubor, na kterém file závisí (cílový soubor). \\
+\hline
+\end{DoxyParams}
+\begin{Desc}
+\item[Příklady]\par
+\mbox{\hyperlink{_c_1_2_users_2stegn_2source_2repos_2_alg2_2_semestral_2src_2main_8cpp-example}{C\+:/\+Users/stegn/source/repos/\+Alg2/\+Semestral/src/main.\+cpp}}.\end{Desc}
+\Hypertarget{class_graph_ac661c795b5bccafd1ec9030b7522e22f}\index{Graph@{Graph}!bfs@{bfs}}
+\index{bfs@{bfs}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{bfs()}{bfs()}}
+{\footnotesize\ttfamily \label{class_graph_ac661c795b5bccafd1ec9030b7522e22f} 
+std\+::set$<$ \mbox{\hyperlink{class_node}{Node}} \texorpdfstring{$\ast$}{*} $>$ Graph\+::bfs (\begin{DoxyParamCaption}\item[{int}]{node}{}\end{DoxyParamCaption})}
+
+
+
+Provádí BFS na transponovaném grafu. 
+
+Provádí prohledávání do šířky (BFS) na transponovaném grafu.
+
+Metoda najde všechny uzly dosažitelné z daného uzlu v transponovaném grafu.
+
+Algoritmus\+:
+\begin{DoxyEnumerate}
+\item Najde se startovací uzel podle zadaného ID v transponovaném grafu
+\item Provede se BFS z tohoto uzlu
+\item Vrátí se množina všech dosažených uzlů bez duplicit
+\end{DoxyEnumerate}
+
+Časová složitost\+: O(V + E), kde V je počet vrcholů a E je počet hran. Prostorová složitost\+: O(\+V) pro frontu a výstupní množinu.
+
+
+\begin{DoxyParams}{Parametry}
+{\em node} & Id uzlu, ze kterého se má začít vyhledávání. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Návratová hodnota}
+Množina ukazatelů na všechny uzly dosažitelné z počátečního uzlu v transponovaném grafu. 
+\end{DoxyReturn}
+\begin{Desc}
+\item[Příklady]\par
+\mbox{\hyperlink{_c_1_2_users_2stegn_2source_2repos_2_alg2_2_semestral_2src_2main_8cpp-example}{C\+:/\+Users/stegn/source/repos/\+Alg2/\+Semestral/src/main.\+cpp}}.\end{Desc}
+\Hypertarget{class_graph_a54460c0052ecad9972497d32904bb965}\index{Graph@{Graph}!getNode@{getNode}}
+\index{getNode@{getNode}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{getNode()}{getNode()}}
+{\footnotesize\ttfamily \label{class_graph_a54460c0052ecad9972497d32904bb965} 
+\mbox{\hyperlink{class_node}{Node}} \texorpdfstring{$\ast$}{*} Graph\+::get\+Node (\begin{DoxyParamCaption}\item[{int}]{value}{}\end{DoxyParamCaption})}
+
+
+
+Vyhledá uzel v grafu podle jeho id. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em value} & Id hledaného uzlu. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Návratová hodnota}
+Ukazatel na nalezený uzel, nebo nullptr pokud uzel neexistuje. 
+\end{DoxyReturn}
+\Hypertarget{class_graph_a79e0eaa71a68b231ffc69d09329c6d78}\index{Graph@{Graph}!getNodes@{getNodes}}
+\index{getNodes@{getNodes}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{getNodes()}{getNodes()}}
+{\footnotesize\ttfamily \label{class_graph_a79e0eaa71a68b231ffc69d09329c6d78} 
+std\+::vector$<$ \mbox{\hyperlink{class_node}{Node}} \texorpdfstring{$\ast$}{*} $>$ Graph\+::get\+Nodes (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Vrátí vektor všech uzlů v grafu. 
+
+\begin{DoxyReturn}{Návratová hodnota}
+Vektor ukazatelů na všechny uzly v grafu. 
+\end{DoxyReturn}
+\Hypertarget{class_graph_a8a8a506d5d54fb0c11708426aca18ef6}\index{Graph@{Graph}!getTNode@{getTNode}}
+\index{getTNode@{getTNode}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{getTNode()}{getTNode()}}
+{\footnotesize\ttfamily \label{class_graph_a8a8a506d5d54fb0c11708426aca18ef6} 
+\mbox{\hyperlink{class_node}{Node}} \texorpdfstring{$\ast$}{*} Graph\+::get\+TNode (\begin{DoxyParamCaption}\item[{int}]{value}{}\end{DoxyParamCaption})}
+
+
+
+Vyhledá uzel v transponovaném grafu podle jeho id. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em value} & Id hledaného uzlu. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Návratová hodnota}
+Ukazatel na nalezený uzel, nebo nullptr pokud uzel neexistuje. 
+\end{DoxyReturn}
+
+
+Dokumentace pro tuto třídu byla vygenerována z následujících souborů\+:\begin{DoxyCompactItemize}
+\item 
+src/Graph.\+h\item 
+src/Graph.\+cpp\end{DoxyCompactItemize}
