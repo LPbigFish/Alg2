@@ -2,7 +2,7 @@
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
-    <LocalDebuggerCommandArguments>tests/LargeProject.txt</LocalDebuggerCommandArguments>
+    <LocalDebuggerCommandArguments>tests/SmallProject.txt</LocalDebuggerCommandArguments>
     <LocalDebuggerCommandArgumentsHistory>./tests/SmallProject.txt|tests/SmallProject.txt|tests/LargeProject.txt|</LocalDebuggerCommandArgumentsHistory>
   </PropertyGroup>
 </Project>
